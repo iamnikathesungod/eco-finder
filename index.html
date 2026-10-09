@@ -1057,8 +1057,8 @@ $('vmap').addEventListener('click', () => { $('map').classList.remove('off'); gc
 $('vglobe').addEventListener('click', () => { $('map').classList.add('off'); gc.classList.remove('off'); $('vglobe').classList.add('on'); $('vmap').classList.remove('on'); if (last) { gl.lon = last.lng; gl.lat = Math.max(-85, Math.min(85, last.lat)); gl.pin = { lat: last.lat, lng: last.lng }; } drawGlobe(); });
 
 /* ---- Accounts (this device only). Passwords are stored only as salted PBKDF2 hashes. The first account is the admin. ---- */
-const SB_URL = 'PASTE-YOUR-SUPABASE-PROJECT-URL-HERE';   // your Supabase project address (public)
-const SB_KEY = 'PASTE-YOUR-SUPABASE-ANON-KEY-HERE';       // the anon / publishable key (public by design; never put the service_role key here)
+const SB_URL = 'https://xbxokdfpjxtxazblsumg.supabase.co';   // your Supabase project address (public)
+const SB_KEY = 'sb_publishable_X1qJz7jv3e8633UVhFgj4A_R5c6Hc4B';       // the anon / publishable key (public by design; never put the service_role key here)
 const hasSB = () => !SB_URL.startsWith('PASTE') && !SB_KEY.startsWith('PASTE');
 const hasDB = hasSB, hasAuth = hasSB;
 let REQ = true, gateOpen = false, shared = [], draft = null, draftReq = null;   // REQ: does the owner require login? (read from ecofinder-data.json)
